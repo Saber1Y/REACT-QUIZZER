@@ -1,10 +1,10 @@
 import { useState } from 'react'
-
+import { btn, Quiz, questions } from './components/index'
 
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <section className='bg-primary'>
+      <Quiz />
+    </section>
   )
 }

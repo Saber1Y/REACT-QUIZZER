@@ -1,11 +1,11 @@
 import React from 'react'
 
-const quiz = () => {
+const Quiz = () => {
   return (
-    <div>
-      
-    </div>
+  <div className='bg-primary h-screen'>
+
+  </div>
   )
 }
 
-export default quiz
+export default Quiz

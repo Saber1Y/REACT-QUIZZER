@@ -1,9 +1,9 @@
 import btn from "./buttons/btn";
-import quiz from "./quiz/quiz";
+import Quiz from "./quiz/Quiz";
 import questions from "./questions/questions";
 
 export {
     btn,
-    quiz,
+    Quiz,
     questions,
 }
