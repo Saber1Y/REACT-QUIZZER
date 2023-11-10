@@ -11,7 +11,6 @@ export default {
         secondaryBtn: '#222',
         secondaryHover: '#ff8c66',
         timecol: '#ff5733',
-
       },
       fontFamily: {
         pops: ['poppins', 'sans-serif'],
