@@ -1,4 +1,4 @@
-const question = [
+const Questions = [
     {
         question: 'which type of memory allows us to unconsciously know how to tie our shoe lace?',
         answers: [
@@ -95,4 +95,4 @@ const question = [
     }
 ];
 
-export default { question };
+export default { Questions };
