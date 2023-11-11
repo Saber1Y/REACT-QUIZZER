@@ -1,19 +1,14 @@
-import React, { useState } from 'react'
-// import rotate from '../../assests/rotate.png'
+import React from 'react';
 
-const btn = ({ text, on }) => {
-  // const [option, setOption] = useState(0)
-  // const optionData = Questions.Questions[option]
-
+const Btn = ({ text, onclick }) => {
   return (
-   <>
-   <button 
-   className='bg-white text-222 font-medium w-full border border-222 p-2 my-2 text-left rounded-md cursor-pointer transition duration-300'
-   onClick={onclick}
-   />
-   {text}
-   </>
-  )
-}
+    <button
+      className='bg-white text-222 font-medium w-full border border-222 p-2 my-2 text-left rounded-md cursor-pointer transition duration-300'
+      onClick={onclick}
+    >
+      {text}
+    </button>
+  );
+};
 
-export default btn
+export default Btn;

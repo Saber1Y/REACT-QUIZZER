@@ -1,8 +1,15 @@
 import React, { useState } from 'react'
 import Questions from '../quizData'
+import Btn from '../buttons/Btn'
 
 const Quiz = () => {
-    
+  const [option, setOption] = useState(0)
+
+  const handleNext = () => {
+    setOption(option + 1)
+  }
+  const optionData = Questions.Questions[option]
+
   return (
 <>
 <div className='bg-primary min-h-screen flex flex-col items-center justify-center'>
@@ -16,7 +23,13 @@ const Quiz = () => {
          </div>
           ))}
   </div>
+  <div id='answers-button'>
+  {optionData.answers.map((answer, index) => {
+  return <Btn key={index} text={answer.text}/>
+})}
+
   </div>
+</div>
 </>
   )
 }
