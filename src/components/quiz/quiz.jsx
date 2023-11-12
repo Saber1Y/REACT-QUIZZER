@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import Questions from '../quizData'
 import Btn from '../buttons/Btn'
+import  Actionbtn from '../Actionbtn/Actionbtn'
+
 
 const Quiz = () => {
   const [option, setOption] = useState(0)
-  const [score, setScore] = useState(0);
+  // const [score, setScore] = useState(0);
 
   const handleNext = () => {
     setOption(option + 1)
@@ -27,9 +29,9 @@ const Quiz = () => {
               return <Btn key={index} text={answer.text} onClick={handleNext}/>
             })}
         </div>
-       <Btn text="Next" />
-       
-            </div>
+          <Btn text="Next" />
+          <Actionbtn text="Try-Again" />
+          </div>
         </div>
       </div>
     </>
