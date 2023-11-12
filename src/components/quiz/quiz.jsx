@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import Questions from '../quizData'
 import Btn from '../buttons/Btn'
-import  Actionbtn from '../Actionbtn/Actionbtn'
+import Actionbtn from '../Actionbtn/Actionbtn'
+import rotate from '../../assests/rotate-right-regular-24.png' 
 
 
 const Quiz = () => {
@@ -29,8 +30,8 @@ const Quiz = () => {
               return <Btn key={index} text={answer.text} onClick={handleNext}/>
             })}
         </div>
-          <Btn text="Next" />
-          <Actionbtn text="Try-Again" />
+          <Actionbtn text="Next" />
+          <Actionbtn text="Try-Again" img={} />
           </div>
         </div>
       </div>
