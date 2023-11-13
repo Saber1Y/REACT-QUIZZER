@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import Questions from '../quizData'
 import Btn from '../buttons/Btn'
 import Actionbtn from '../Actionbtn/Actionbtn'
-import rotate from '../../assests/rotate-right-regular-24.png' 
+// import rotate from '../../assests/rotate-right-regular-24.png' 
+// import { IoReloadOutline } from 'react-icons/io5';
+
 
 
 const Quiz = () => {
@@ -31,7 +33,8 @@ const Quiz = () => {
             })}
         </div>
           <Actionbtn text="Next" />
-          <Actionbtn text="Try-Again" img={} />
+          <Actionbtn text="Try-Again" />
+
           </div>
         </div>
       </div>
