@@ -34,7 +34,6 @@ const Quiz = () => {
         </div>
           <Actionbtn text="Next" />
           <Actionbtn text="Try-Again" />
-
           </div>
         </div>
       </div>
