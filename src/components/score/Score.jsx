@@ -1,11 +1,7 @@
 import React from 'react'
 
-const Score = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+const Score = ({ Score }) => {
+  return <div>Score: {Score}</div>
 }
 
 export default Score

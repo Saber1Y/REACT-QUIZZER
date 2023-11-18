@@ -9,7 +9,14 @@ import Actionbtn from '../Actionbtn/Actionbtn'
 
 const Quiz = () => {
   const [option, setOption] = useState(0)
-  // const [score, setScore] = useState(0);
+  const [score, setScore] = useState(0);
+
+
+  const HandleScore = () => {
+    if (isCorrect) {
+      setScore((prevScore) => prevScore + 1);
+    }
+  }
 
   const handleNext = () => {
     setOption(option + 1)
