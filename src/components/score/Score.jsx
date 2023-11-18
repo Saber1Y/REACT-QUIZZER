@@ -1,18 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react';
 
-const Score = ({ initialscore }) => {
-
-  const [score, setScore] = useState(initialscore);
-
-  const handleNextScore = () => {
-    setScore(score + 1)
-  }
-
+const Score = ({ correctAnswers, totalQuestions }) => {
   return (
-    <div>
-      <p className='text-2xl font-bold text-center mt-10'>Score: {score}</p>
+    <div id="scoreboard" className='text-2xl font-bold text-center mt-3'>
+      Score: <span id="score">{correctAnswers}</span> / <span id="total-questions">{totalQuestions}</span>
     </div>
-  )
-}
+  );
+};
 
-export default Score
+export default Score;

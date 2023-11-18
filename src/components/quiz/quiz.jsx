@@ -4,6 +4,7 @@ import Btn from '../buttons/Btn'
 import Actionbtn from '../Actionbtn/Actionbtn'
 import Score from '../score/Score'
 import Timer from '../Timer/Timer'
+import questions from '../questions/questions'
 // import rotate from '../../assests/rotate-right-regular-24.png' 
 // import { IoReloadOutline } from 'react-icons/io5';
 
@@ -11,6 +12,7 @@ import Timer from '../Timer/Timer'
 
 const Quiz = () => {
   const [option, setOption] = useState(0)
+  const [correctAnswers, setCorrectAnswers] = useState(0);
 
   const handleNext = () => {
     setOption(option + 1)
@@ -43,7 +45,7 @@ const Quiz = () => {
           <Actionbtn text="Next" />
           <Actionbtn text="Try-Again" />
           </div>
-              <Score />
+              <Score correctAnswers={correctAnswers} totalQuestions={questions.length}  />
               <Timer />
         </div>
       </div>
