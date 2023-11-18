@@ -29,7 +29,14 @@ const Quiz = () => {
             <div>
          <div id='answers-button'>
             {optionData.answers.map((answer, index) => {
-              return <Btn key={index} text={answer.text} onClick={handleNext}/>
+              return (
+              <Btn 
+              key={index} 
+              text={answer.text}
+              onClick={handleNext}
+              isCorrect={answer.correct}
+               />
+              )
             })}
         </div>
           <Actionbtn text="Next" />
