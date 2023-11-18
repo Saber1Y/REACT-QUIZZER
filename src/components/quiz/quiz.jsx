@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Questions from '../quizData'
 import Btn from '../buttons/Btn'
 import Actionbtn from '../Actionbtn/Actionbtn'
+import Score from '../score/Score'
+import Timer from '../Timer/Timer'
 // import rotate from '../../assests/rotate-right-regular-24.png' 
 // import { IoReloadOutline } from 'react-icons/io5';
 
@@ -9,14 +11,6 @@ import Actionbtn from '../Actionbtn/Actionbtn'
 
 const Quiz = () => {
   const [option, setOption] = useState(0)
-  const [score, setScore] = useState(0);
-
-
-  const HandleScore = () => {
-    if (isCorrect) {
-      setScore((prevScore) => prevScore + 1);
-    }
-  }
 
   const handleNext = () => {
     setOption(option + 1)
@@ -49,6 +43,8 @@ const Quiz = () => {
           <Actionbtn text="Next" />
           <Actionbtn text="Try-Again" />
           </div>
+              <Score />
+              <Timer />
         </div>
       </div>
     </>
