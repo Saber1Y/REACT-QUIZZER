@@ -17,7 +17,9 @@ const Quiz = () => {
   const handleNext = () => {
     setOption(option + 1)
   }
-  const optionData = Questions.Questions[option]
+
+  const optionData = Questions.Questions[option];
+  
 
   return (
     <>
@@ -45,7 +47,7 @@ const Quiz = () => {
           <Actionbtn text="Next" />
           <Actionbtn text="Try-Again" />
           </div>
-              <Score correctAnswers={correctAnswers} totalQuestions={questions.length}  />
+              <Score correctAnswers={correctAnswers} totalQuestions={Questions.length}  />
               <Timer />
         </div>
       </div>
