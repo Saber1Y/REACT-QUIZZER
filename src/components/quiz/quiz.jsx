@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Questions from '../quizData';
 import Btn from '../buttons/Btn';
 import Actionbtn from '../Actionbtn/Actionbtn';
@@ -10,19 +10,24 @@ const Quiz = () => {
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [answered, setAnswered] = useState(false);
 
+  useEffect(() => {
+    alert('Good-Luck!');
+  },[]);
+
   const handleNext = () => {
     setOption(option + 1);
-    setAnswered(false);
   };
 
   const optionData = Questions.Questions[option];
 
-  const checkAnswer = (isCorrect) => {
-    if (isCorrect) {
-      setCorrectAnswers((prevCorrectAnswers) => prevCorrectAnswers + 1);
-    }
-    setAnswered(true);
-  };
+  // const checkAnswer = (isCorrect) => {
+  //   if (isCorrect) {
+  //     setCorrectAnswers((prevCorrectAnswers) => prevCorrectAnswers + 1);
+  //   }
+  //   else {
+  //     setAnswered(true);
+  //   }
+  // };
 
   return (
     <>
@@ -44,8 +49,8 @@ const Quiz = () => {
               />
             ))}
           </div>
-          {answered && <Actionbtn text="Next" onClick={handleNext} />}
-          {!answered && <Actionbtn text="Try-Again" />}
+          {<Actionbtn text="Next" onClick={handleNext} />}
+          {<Actionbtn text="Try-Again" />}
           <Score correctAnswers={correctAnswers} totalQuestions="10" />
           <Timer />
         </div>
