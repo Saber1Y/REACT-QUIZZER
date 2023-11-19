@@ -15,6 +15,9 @@ const Quiz = () => {
   },[]);
 
   const handleNext = () => {
+    if (option === Questions.Questions.length - 1) {
+      alert('You are done!');
+    }
     setOption(option + 1);
   };
 
