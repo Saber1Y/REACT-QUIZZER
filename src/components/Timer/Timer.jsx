@@ -18,7 +18,7 @@ const Timer = () => {
 
   return (
     <div id="time" className='text-2xl font-bold text-center mt-3'>
-      Time: {Math.floor(time / 60)}:{(time % 60).toString().padStart(2, '0')} {/* Display the time in minutes and seconds */}
+      Time: <span className='text-red-500'>{Math.floor(time / 60)}</span> : <span className='text-red-500'>{(time % 60).toString().padStart(2, '0')}</span>
     </div>
   );
 };

@@ -47,7 +47,7 @@ const Quiz = () => {
           <Actionbtn text="Next" />
           <Actionbtn text="Try-Again" />
           </div>
-              <Score correctAnswers={correctAnswers} totalQuestions={Questions.length}  />
+              <Score correctAnswers={correctAnswers} totalQuestions="10"  />
               <Timer />
         </div>
       </div>
