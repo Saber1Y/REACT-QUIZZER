@@ -1,25 +1,28 @@
-import React, { useState } from 'react'
-import Questions from '../quizData'
-import Btn from '../buttons/Btn'
-import Actionbtn from '../Actionbtn/Actionbtn'
-import Score from '../score/Score'
-import Timer from '../Timer/Timer'
-import questions from '../questions/questions'
-// import rotate from '../../assests/rotate-right-regular-24.png' 
-// import { IoReloadOutline } from 'react-icons/io5';
-
-
+import React, { useState } from 'react';
+import Questions from '../quizData';
+import Btn from '../buttons/Btn';
+import Actionbtn from '../Actionbtn/Actionbtn';
+import Score from '../score/Score';
+import Timer from '../Timer/Timer';
 
 const Quiz = () => {
-  const [option, setOption] = useState(0)
+  const [option, setOption] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [answered, setAnswered] = useState(false);
 
   const handleNext = () => {
-    setOption(option + 1)
-  }
+    setOption(option + 1);
+    setAnswered(false);
+  };
 
   const optionData = Questions.Questions[option];
-  
+
+  const checkAnswer = (isCorrect) => {
+    if (isCorrect) {
+      setCorrectAnswers((prevCorrectAnswers) => prevCorrectAnswers + 1);
+    }
+    setAnswered(true);
+  };
 
   return (
     <>
@@ -31,28 +34,24 @@ const Quiz = () => {
             <span className='font-semibold text-2xl mr-3'>{option + 1}. </span>
             <span className='text-2xl font-semibold'>{optionData.question}</span>
           </div>
-            <div>
-         <div id='answers-button'>
-            {optionData.answers.map((answer, index) => {
-              return (
-              <Btn 
-              key={index} 
-              text={answer.text}
-              onClick={handleNext}
-              isCorrect={answer.correct}
-               />
-              )
-            })}
-        </div>
-          <Actionbtn text="Next" />
-          <Actionbtn text="Try-Again" />
+          <div id='answers-button'>
+            {optionData.answers.map((answer, index) => (
+              <Btn
+                key={index}
+                text={answer.text}
+                onClick={() => checkAnswer(answer.correct)}
+                isCorrect={answer.correct}
+              />
+            ))}
           </div>
-              <Score correctAnswers={correctAnswers} totalQuestions="10"  />
-              <Timer />
+          {answered && <Actionbtn text="Next" onClick={handleNext} />}
+          {!answered && <Actionbtn text="Try-Again" />}
+          <Score correctAnswers={correctAnswers} totalQuestions="10" />
+          <Timer />
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Quiz
+export default Quiz;

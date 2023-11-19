@@ -18,7 +18,7 @@ const Timer = () => {
 
   return (
     <div id="time" className='text-2xl font-bold text-center mt-3'>
-      Time: <span className='text-red-500'>{Math.floor(time / 60)}</span> : <span className='text-red-500'>{(time % 60).toString().padStart(2, '0')}</span>
+      Time Left: <span className='text-red-500'>{Math.floor(time / 60)}</span> : <span className='text-red-500'>{(time % 60).toString().padStart(2, '0')}</span>
     </div>
   );
 };
