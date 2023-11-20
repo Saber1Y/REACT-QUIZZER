@@ -12,7 +12,7 @@ const Quiz = () => {
 
   useEffect(() => {
     alert('Good-Luck!');
-  },[]);
+  },[1]);
 
   const handleNext = () => {
     if (option === Questions.Questions.length - 1) {
