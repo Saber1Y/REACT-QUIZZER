@@ -27,14 +27,19 @@ const Quiz = () => {
 
   const optionData = Questions.Questions[option];
 
-  // const checkAnswer = (isCorrect) => {
-  //   if (isCorrect) {
-  //     setCorrectAnswers((prevCorrectAnswers) => prevCorrectAnswers + 1);
-  //   }
-  //   else {
-  //     setAnswered(true);
-  //   }
-  // };
+  const checkAnswer = (isCorrect) => {
+    if (isCorrect) {
+      setCorrectAnswers((prevCorrectAnswers) => prevCorrectAnswers + 1);
+    }
+   
+      setAnswered(true);
+       setOption(option + 1);
+  };
+
+  const handleTryAgain = () => {
+    setOption(0);
+    // setAnswered(false);
+  }
 
   return (
     <>
@@ -57,7 +62,7 @@ const Quiz = () => {
             ))}
           </div>
           {<Actionbtn text="Next" onClick={handleNext} />}
-          {<Actionbtn text="Try-Again" />}
+          <Actionbtn text="Try-Again" onClick={handleTryAgain} />
           <Score correctAnswers={correctAnswers} totalQuestions="10" />
           <Timer onTimerEnd={TimerEnd} />
         </div>
