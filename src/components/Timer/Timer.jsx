@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react';
 
-const Timer = () => {
+const Timer = ({ onTimerEnd }) => {
   const [time, setTime] = useState(30); 
 
   useEffect(() => {
     if (time > 0) {
-      
       const timerInterval = setInterval(() => {
         setTime(prevTime => prevTime - 1); 
       }, 1000);
-
-      return () => clearInterval(timerInterval);
+  return () => clearInterval(timerInterval);
     } else {
-      
+      onTimerEnd();
+      setTime(30)
     }
-  }, [time]); 
+  }, [time, onTimerEnd]); 
 
   return (
   <div id="time" className='text-2xl font-bold text-center mt-3'>

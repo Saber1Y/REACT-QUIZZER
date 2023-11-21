@@ -7,10 +7,7 @@ const Score = ({ correctAnswers, totalQuestions }) => {
     
   return (
     <div id="scoreboard" className='text-2xl font-bold  text-center mt-3'>
-      Score: <span id="score" 
-      className='text-red-500'>{correctAnswers}</span> 
-      / <span id="total-questions" 
-      className='text-red-500'>{totalQuestions}</span>
+      Score: <span id="score" className='text-red-500'>{correctAnswers}</span> / <span id="total-questions" className='text-red-500'>{totalQuestions}</span>
     </div>
   );
 };

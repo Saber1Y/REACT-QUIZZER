@@ -21,6 +21,10 @@ const Quiz = () => {
     setOption(option + 1);
   };
 
+  const TimerEnd = () => {
+    setOption(option + 1);
+  };
+
   const optionData = Questions.Questions[option];
 
   // const checkAnswer = (isCorrect) => {
@@ -55,7 +59,7 @@ const Quiz = () => {
           {<Actionbtn text="Next" onClick={handleNext} />}
           {<Actionbtn text="Try-Again" />}
           <Score correctAnswers={correctAnswers} totalQuestions="10" />
-          <Timer />
+          <Timer onTimerEnd={TimerEnd} />
         </div>
       </div>
     </>
