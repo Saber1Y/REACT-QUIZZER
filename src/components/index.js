@@ -4,6 +4,7 @@ import questions from "./questions/questions";
 import Actionbtn from './Actionbtn/Actionbtn'
 import Timer from "./Timer/Timer";
 import Score from "./score/Score";
+import Welcome from "../index/Welcome";
 
 export {
     btn,
@@ -11,5 +12,5 @@ export {
     questions,
     Actionbtn,
     Timer,
-    Score
+    Score,
 }
