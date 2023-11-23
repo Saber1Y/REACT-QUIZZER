@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Questions from '../quizData';
 import Btn from '../buttons/Btn';
 import Actionbtn from '../Actionbtn/Actionbtn';
