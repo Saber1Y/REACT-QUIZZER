@@ -12,7 +12,7 @@ const Quiz = () => {
 
   useEffect(() => {
     alert('Good-Luck!');
-  },[1]);
+  }, []);
 
   const handleNext = () => {
     if (option === Questions.Questions.length - 1) {
@@ -27,14 +27,24 @@ const Quiz = () => {
 
   const optionData = Questions.Questions[option];
 
-  const checkAnswer = (isCorrect) => {
-    if (isCorrect) {
-      setCorrectAnswers((prevCorrectAnswers) => prevCorrectAnswers + 1);
-    }
-   
-      setAnswered(true);
-       setOption(option + 1);
-  };
+  
+
+// const checkAnswer = () => {
+//   return (
+    
+//   )
+// }
+
+  // const checkAnswer = (isCorrect) => {
+  //   if (isCorrect) {
+  //     setCorrectAnswers((prevCorrectAnswers) => prevCorrectAnswers + 1);
+  //   }
+  //   //  else {
+  //   //   setCorrectAnswers((prevCorrectAnswers) => prevCorrectAnswers === 1);
+  //   //  }
+  //     setAnswered(true);
+  //     setOption(option + 1);
+  // };
 
   const handleTryAgain = () => {
     setOption(0);
@@ -61,8 +71,8 @@ const Quiz = () => {
               />
             ))}
           </div>
-          {<Actionbtn text="Next" onClick={handleNext} />}
-          <Actionbtn text="Try-Again" onClick={handleTryAgain} />
+          {answered && <Actionbtn text="Next" onClick={handleNext} />}
+          {answered &&<Actionbtn text="Try-Again" onClick={handleTryAgain} />}
           <Score correctAnswers={correctAnswers} totalQuestions="10" />
           <Timer onTimerEnd={TimerEnd} />
         </div>
