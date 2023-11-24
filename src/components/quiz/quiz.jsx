@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Questions from '../quizData';
 import Btn from '../buttons/Btn';
 import Actionbtn from '../Actionbtn/Actionbtn';
@@ -15,6 +14,13 @@ const Quiz = () => {
     alert('Good-Luck!');
   }, []);
 
+  useEffect(() => {
+  if (option === Questions.Questions.length - 1) {
+    setOption(0);
+  }
+  }, []);
+
+
   const handleNext = () => {
     if (option === Questions.Questions.length - 1) {
       alert('You are done!');
@@ -28,9 +34,8 @@ const Quiz = () => {
 
   const optionData = Questions.Questions[option];
 
-  
-
 // const checkAnswer = () => {
+
 //   return (
     
 //   )
@@ -46,7 +51,6 @@ const Quiz = () => {
   //     setAnswered(true);
   //     setOption(option + 1);
   // };
-
   const handleTryAgain = () => {
     setOption(0);
     // setAnswered(false);

@@ -13,4 +13,5 @@ export {
     Actionbtn,
     Timer,
     Score,
+    Welcome,
 }
