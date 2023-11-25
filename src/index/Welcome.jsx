@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Welcome = () => {
   return (
@@ -18,9 +19,12 @@ const Welcome = () => {
             flex those brain muscles, and let's dive into the world of Quizzer!
             Happy quizzing!
         </p>
-      <a className="bg-green-500 text-white py-2 px-4 rounded-full inline-block hover:bg-green-600">
+      <Link
+        to="/quiz"
+        className="bg-green-500 text-white py-2 px-4 rounded-full inline-block hover:bg-green-600"
+          >
         Start Quiz
-      </a>
+      </Link>
       <a className="bg-blue-500 text-white py-2 px-4 rounded-full inline-block hover:bg-blue-600">
         Rules
       </a>

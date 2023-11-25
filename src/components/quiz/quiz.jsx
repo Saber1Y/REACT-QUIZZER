@@ -14,11 +14,11 @@ const Quiz = () => {
     alert('Good-Luck!');
   }, []);
 
-  useEffect(() => {
-  if (option === Questions.Questions.length - 1) {
-    setOption(0);
-  }
-  }, []);
+
+  // if (option === Questions.Questions.length - 1) {
+  //   setOption(0);
+  // }
+  // }, []);
 
 
   const handleNext = () => {
@@ -77,7 +77,7 @@ const Quiz = () => {
             ))}
           </div>
           {answered && <Actionbtn text="Next" onClick={handleNext} />}
-          {answered &&<Actionbtn text="Try-Again" onClick={handleTryAgain} />}
+          {!answered &&<Actionbtn text="Try-Again" onClick={handleTryAgain} />}
           <Score correctAnswers={correctAnswers} totalQuestions="10" />
           <Timer onTimerEnd={TimerEnd} />
         </div>
