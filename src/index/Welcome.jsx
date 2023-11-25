@@ -24,10 +24,13 @@ const Welcome = () => {
         className="bg-green-500 text-white py-2 px-4 rounded-full inline-block hover:bg-green-600"
           >
         Start Quiz
-      </Link>
-      <a className="bg-blue-500 text-white py-2 px-4 rounded-full inline-block hover:bg-blue-600">
+        </Link>
+      <Link
+        to="/Rules"
+        className="bg-blue-500 text-white py-2 px-4 rounded-full inline-block hover:bg-blue-600"
+        >
         Rules
-      </a>
+        </Link>
     </div>
   )
 }

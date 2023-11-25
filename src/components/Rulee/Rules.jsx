@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 
 const Rules = () => {
   return (
@@ -8,7 +8,7 @@ const Rules = () => {
       <hr className='1px solid bg-orange-600 pt-6'/>
       <div>
         <ol>
-          <li>
+          <li className='text-xl text-white my-2 font-seoge'>
             Quiz Duration: Each quiz session has a time limit of 5 minutes (300
             seconds). Players must answer as many questions as they can within
             the time limit.
