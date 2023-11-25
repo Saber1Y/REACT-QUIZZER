@@ -15,7 +15,10 @@ export default {
       fontFamily: {
         pops: ['poppins', 'sans-serif'],
         seoge: ["Segoe UI", 'Tahoma', 'Geneva', 'Verdana', 'sans-serif']
-      }
+      },
+      boxShadow: {
+        'custom': '20px 10px 20px #001e4d',
+      },
     },
   },
   plugins: [],
