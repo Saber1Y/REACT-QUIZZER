@@ -22,7 +22,7 @@ const Welcome = () => {
         Start Quiz
       </Link>
       <Link
-        to="/Rules"
+        to="/Rule"
         className="bg-orange-600 text-white py-2 px-4 rounded-full inline-block hover:bg-blue-600 mt-4 ml-4"
       >
         Rules

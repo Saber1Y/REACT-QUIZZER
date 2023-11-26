@@ -19,6 +19,17 @@ export default {
       boxShadow: {
         'custom': '20px 10px 20px #001e4d',
       },
+      screens: {
+        'sm': '640px',  
+        'md': '768px', 
+        'lg': '1024px',
+        'xl': '1280px', 
+      },
+      spacing: {
+        '72': '18rem',
+        '84': '21rem',
+        '96': '24rem',
+      },
     },
   },
   plugins: [],
