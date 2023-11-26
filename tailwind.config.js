@@ -25,11 +25,6 @@ export default {
         'lg': '1024px',
         'xl': '1280px', 
       },
-      spacing: {
-        '72': '18rem',
-        '84': '21rem',
-        '96': '24rem',
-      },
     },
   },
   plugins: [],
