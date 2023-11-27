@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Welcome = () => {
   return (
-    <div className='text-center max-w-2xl mx-auto box-border border-white border shadow-2xl rounded-xl border-solid'>
+    <div className='text-center bg-primary max-w-2xl mx-auto box-border border-white border shadow-2xl rounded-xl border-solid'>
       <h1 className='text-3xl text-white font-bold mb-2'>Welcome to Quizzer!</h1>
       <h3 className='text-xl mb-2 text-orange-500'>Welcome to Quizzer - Test Your Knowledge!</h3>
       <p className='text-white text-2xl font-bold px-14'>
