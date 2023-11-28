@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { btn, Quiz, questions, Welcome, Rules } from './components/index'
+import { btn, Quiz,  Welcome, Rules } from './components/index'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 

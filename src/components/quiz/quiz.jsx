@@ -9,17 +9,12 @@ const Quiz = () => {
   const [option, setOption] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [answered, setAnswered] = useState(false);
+  const [showNextBtn, setshowNextBtn] = useState(false);
+  const [showTryagainBtn, setshowTryagainBtn] = useState(false);
 
   useEffect(() => {
     alert('Good-Luck!');
   }, []);
-
-
-  // if (option === Questions.Questions.length - 1) {
-  //   setOption(0);
-  // }
-  // }, []);
-
 
   const handleNext = () => {
     if (option === Questions.Questions.length - 1) {
@@ -34,23 +29,16 @@ const Quiz = () => {
 
   const optionData = Questions.Questions[option];
 
-// const checkAnswer = () => {
 
-//   return (
-    
-//   )
-// }
-
-  // const checkAnswer = (isCorrect) => {
-  //   if (isCorrect) {
-  //     setCorrectAnswers((prevCorrectAnswers) => prevCorrectAnswers + 1);
-  //   }
-  //   //  else {
-  //   //   setCorrectAnswers((prevCorrectAnswers) => prevCorrectAnswers === 1);
-  //   //  }
-  //     setAnswered(true);
-  //     setOption(option + 1);
-  // };
+  function checkAnswer(isCorrect, e) {
+    if (isCorrect) {
+     setCorrectAnswers(correctAnswers + 1)
+      setshowNextBtn(true);
+    } else {
+      setshowNextBtn(false);
+    }
+}
+  
   const handleTryAgain = () => {
     setOption(0);
     // setAnswered(false);
